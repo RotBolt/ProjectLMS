@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.AccountFragment">
+
+
+    <ImageView
+        android:id="@+id/ivAccountPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/ring_bg"
+        android:padding="16dp"
+        android:src="@drawable/ic_person"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.293" />
+
+    <TextView
+        android:id="@+id/tvPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rohan Maity"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivAccountPicture"
+        app:layout_constraintStart_toStartOf="@+id/ivAccountPicture"
+        app:layout_constraintTop_toBottomOf="@id/ivAccountPicture" />
+
+
+    <TextView
+        android:id="@+id/tvEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  chunnu@gmail.com"
+        android:padding="8dp"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawableStart="@drawable/ic_email"
+        android:layout_marginTop="8dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvPersonName"
+        app:layout_constraintStart_toStartOf="@+id/tvPersonName"
+        app:layout_constraintTop_toBottomOf="@id/tvPersonName" />
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
+        android:padding="16dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorFade"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="36dp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/tvEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/tvEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailAddress" />
+
+</android.support.constraint.ConstraintLayout>

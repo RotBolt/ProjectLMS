@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#F44336</color>
+    <color name="colorNotSelected">#A0EEEDED</color>
+    <color name="colorPurple">#681BDD</color>
+    <color name="colorAmber">#FF9800</color>
+    <color name="colorAzure">#334EE6</color>
+    <color name="colorCyan">#03A9F4</color>
+    <color name="colorFade">#DEFFCD</color>
+</resources>
