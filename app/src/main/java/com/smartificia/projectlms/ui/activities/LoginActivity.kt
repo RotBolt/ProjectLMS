@@ -19,6 +19,10 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+/**
+ * Login activity for application
+ */
+
 class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,6 +50,8 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+
+    // validates the credentials for Login and start main page if success
     private fun validateLogin() {
 
         showLoading(status = true)
@@ -89,6 +95,7 @@ class LoginActivity : AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
+    // utility function to check the emailId and password fields empty or not
     private fun checkFieldsNotEmpty() = when {
         etEmailId.text.isEmpty() -> {
             etEmailId.hint = "Email-Id Cannot be empgty"

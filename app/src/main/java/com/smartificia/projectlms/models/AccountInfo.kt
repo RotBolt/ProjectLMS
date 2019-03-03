@@ -4,6 +4,9 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 
+/**
+ * Current Logged in User account info
+ */
 @Parcelize
 data class AccountInfo(
     val usertype:String,

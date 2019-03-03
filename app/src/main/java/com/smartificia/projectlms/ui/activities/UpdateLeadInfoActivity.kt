@@ -91,7 +91,7 @@ class UpdateLeadInfoActivity : AppCompatActivity() {
         btnUpdate.visibility = View.GONE
         val leadsApi = ApiService.getInstance().getLeadsApi()
 
-        leadsApi.updateLeadInfoAdmin(
+        leadsApi.updateLeadInfo(
             userid = leadUpdateInfo.userid,
             phone = leadUpdateInfo.phone,
             emailId = leadUpdateInfo.emailid,

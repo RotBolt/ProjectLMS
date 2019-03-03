@@ -4,6 +4,10 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 
+/**
+ * Data Model required for sending the Lead Details for updating Lead details
+ */
+
 @Parcelize
 data class LeadUpdateInfo(
     val userid:String,

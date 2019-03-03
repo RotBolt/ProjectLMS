@@ -1,6 +1,5 @@
 package com.smartificia.projectlms.ui.fragments
 
-import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -14,7 +13,6 @@ import com.smartificia.projectlms.api.ApiService
 import com.smartificia.projectlms.models.GenericResponse
 import com.smartificia.projectlms.models.LeadInfo
 import com.smartificia.projectlms.ui.adapters.LeadsAdapter
-import com.smartificia.projectlms.ui.viewModels.LeadsViewModel
 import com.smartificia.projectlms.utils.GlobalLocalCache
 import com.smartificia.projectlms.utils.convertToDatedList
 import com.smartificia.projectlms.utils.isConnected
@@ -23,13 +21,19 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+/**
+ *
+ *  Class representing the Leads Page
+ *  All the Leads details are shown by LeadsFragment.
+ *  Its the duty of this class to show the list of Leads
+ *
+ */
+
 class LeadsFragment : Fragment() {
 
     companion object {
         fun newInstance() = LeadsFragment()
     }
-
-    private lateinit var viewModel: LeadsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,8 +45,6 @@ class LeadsFragment : Fragment() {
     private lateinit var leadsAdapter: LeadsAdapter
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(LeadsViewModel::class.java)
-        // TODO: Use the ViewModel
 
         swipeRefreshLayout.setOnRefreshListener {
             refresh()
@@ -55,6 +57,11 @@ class LeadsFragment : Fragment() {
         refresh(isFirst = true)
 
     }
+
+
+    /**
+     *  Refresh function : to refresh the content of leads from Interent
+     */
 
     private fun refresh(isFirst: Boolean = false) {
 

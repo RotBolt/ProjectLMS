@@ -8,6 +8,12 @@ import retrofit2.http.GET
 import retrofit2.http.PUT
 import retrofit2.http.Query
 
+
+/**
+ *  API interface for accessing Leads Details
+ *  All actions related to Leads details should go here
+ */
+
 interface LeadsApi {
 
     @GET("/api/apisan.php?op=leaddet")
@@ -15,7 +21,7 @@ interface LeadsApi {
 
 
     @PUT("/api/apisan.php?op=leadupdate")
-    fun updateLeadInfoAdmin(
+    fun updateLeadInfo(
         @Query("userid") userid: String,
         @Query("leadid") leadid:String,
         @Query("leadname") leadname:String,

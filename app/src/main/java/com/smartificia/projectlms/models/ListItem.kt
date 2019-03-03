@@ -1,5 +1,11 @@
 package com.smartificia.projectlms.models
 
+
+/**
+ *  abstract class that every list item should extend to define
+ *  the type of List Item (DATE, ASSIGNED OR LEAD)
+ */
+
 abstract class ListItem {
 
     companion object {

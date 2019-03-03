@@ -1,5 +1,13 @@
 package com.smartificia.projectlms.utils
 
+
+/**
+ * Helper class :
+ * For constant labels used in project
+ *
+ * All constants should go here
+ */
+
 object Labels {
 
     const val allLeads = "All Leads"

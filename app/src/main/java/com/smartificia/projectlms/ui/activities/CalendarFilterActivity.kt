@@ -13,7 +13,7 @@ import com.smartificia.projectlms.utils.convertToDatedList
 import kotlinx.android.synthetic.main.activity_calendar_filter.*
 import java.util.*
 
-
+// Custom date class for the ease of comparing dates
 data class Date(val YYYY: Int, val MM: Int, val DD: Int) {
     companion object {
         fun fromString(dateString: String): Date {
@@ -23,6 +23,10 @@ data class Date(val YYYY: Int, val MM: Int, val DD: Int) {
     }
 }
 
+
+/**
+ * Filters the lead details and show the list of details within FROM ASSIGNED DATE to TO ASSIGNED DATE
+ */
 class CalendarFilterActivity : AppCompatActivity() {
 
     private var toDate: Date = Date(-1, -1, -1)
@@ -115,6 +119,7 @@ class CalendarFilterActivity : AppCompatActivity() {
         }
     }
 
+    // TO DATE should be greater than or equal to FROM date .
     private fun validateToDate(yyyy: Int, mm: Int, dd: Int): Boolean {
         return yyyy >= fromDate.YYYY && mm >= fromDate.MM && dd >= fromDate.DD
     }

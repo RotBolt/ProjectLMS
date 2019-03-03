@@ -6,6 +6,13 @@ import com.smartificia.projectlms.models.LeadInfo
 import com.smartificia.projectlms.models.ListItem
 import kotlin.random.Random
 
+
+/**
+ * Utility function to convert the list of LEAD Details as per dates assigned
+ *
+ * Converts the simple list of Leads to list of Leads GROUPED by Date parameter
+ */
+
 fun convertToDatedList(leads: List<LeadInfo>): List<ListItem> {
     val treeMap = mutableMapOf<String, MutableList<LeadInfo>>()
     for (lead in leads) {
@@ -27,6 +34,13 @@ fun convertToDatedList(leads: List<LeadInfo>): List<ListItem> {
     }
     return convertedDatedList
 }
+
+
+/**
+ * Utility function to convert the list of LEAD Details as per dates and leads assigned
+ *
+ * Converts the simple list of Leads to list of Leads GROUPED by Date and Assigned-To parameters
+ */
 
 fun convertToDatedAssignedList(leads: List<LeadInfo>): List<ListItem> {
     val treeMap = mutableMapOf<String, MutableMap<String, MutableList<LeadInfo>>>()

@@ -7,6 +7,13 @@ import android.support.v4.app.DialogFragment
 import android.widget.DatePicker
 import java.util.*
 
+
+/**
+ * Helper class for Date Selecting
+ *  to show the calendar (Date picker)
+ *  to choose the date from calender
+ */
+
 class DatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
@@ -20,6 +27,9 @@ class DatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener 
         return DatePickerDialog(context, this, year, month, day)
     }
 
+    /* Interface callback , to listen to the event of Date Set (Picked) by user
+    *  Activity or Fragment showing Date picker , have to implement this Callback
+    */
     private lateinit var onDateSet: (yyyy: Int, mm: Int, dd: Int) -> Unit
 
     fun setOnDateSet(p: (Int, Int, Int) -> Unit) {

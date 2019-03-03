@@ -17,6 +17,15 @@ import com.smartificia.projectlms.models.ListItem
 import com.smartificia.projectlms.ui.activities.LeadDetailsActivity
 import com.smartificia.projectlms.utils.Labels
 
+
+/**
+ *  Adapter to show the lead details as list
+ *
+ *  For more details about the working refer this :
+ *  @link RecyclerView (https://developer.android.com/guide/topics/ui/layout/recyclerview)
+ *  @link List Adapter(https://developer.android.com/reference/android/support/v7/recyclerview/extensions/ListAdapter)
+ */
+
 class LeadsAdapter : ListAdapter<ListItem, LeadsAdapter.LeadViewHolder>(diffCallBack) {
 
 

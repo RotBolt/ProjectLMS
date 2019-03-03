@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.fragment_account.*
 
 
 /**
- * A simple [Fragment] subclass.
+ * Fragment Showing the details of Current Logged in User
  *
  */
 class AccountFragment : Fragment() {
@@ -32,6 +32,7 @@ class AccountFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         with(GlobalLocalCache.getAccountInfo()) {
             tvPersonName.text = "$firstname $lastname"
             tvEmailAddress.text = "  $email"

@@ -3,7 +3,10 @@ package com.smartificia.projectlms.models
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
-
+/**
+ *  Data Model holding LEAD DETAILS
+ *  These are details to be shown to users
+ */
 @Parcelize
 data class LeadInfo(
     val leadid: String,

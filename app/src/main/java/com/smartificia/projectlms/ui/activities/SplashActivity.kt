@@ -30,7 +30,6 @@ class SplashActivity : AppCompatActivity() {
                     val intent = Intent(this, LoginActivity::class.java)
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-
                         val options = ActivityOptions.makeSceneTransitionAnimation(
                             this,
                             UtilPair.create(ivAppIcon, "app_icon")

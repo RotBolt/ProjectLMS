@@ -14,11 +14,17 @@ import com.smartificia.projectlms.utils.Labels
 import com.smartificia.projectlms.utils.isConnected
 import kotlinx.android.synthetic.main.activity_lead_details.*
 
+
+/**
+ *  Lead details activity showing the full details of a particular lead
+ *  View the details of lead and a means of updating the lead details
+ *
+ */
+
 class LeadDetailsActivity : AppCompatActivity() {
 
     private lateinit var leadInfo: LeadInfo
 
-    private var updateFlag = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

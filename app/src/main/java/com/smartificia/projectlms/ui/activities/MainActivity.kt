@@ -13,8 +13,14 @@ import com.smartificia.projectlms.utils.GlobalLocalCache
 import com.smartificia.projectlms.utils.Labels
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ *  Entry point for Application
+ */
+
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
+
+    // define actions on the click of bottom navigation items
     override fun onNavigationItemSelected(menuItem: MenuItem): Boolean =
         when (menuItem.itemId) {
             R.id.action_leads -> {
@@ -42,6 +48,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         setupComponents()
     }
 
+    // setting up initial things
     private fun setupComponents() {
 
         toolbar.title = "Hello, ${GlobalLocalCache.getAccountInfo().firstname}"

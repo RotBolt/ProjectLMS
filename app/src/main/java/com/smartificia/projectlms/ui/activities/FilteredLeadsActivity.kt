@@ -14,6 +14,10 @@ import com.smartificia.projectlms.utils.convertToDatedAssignedList
 import com.smartificia.projectlms.utils.convertToDatedList
 import kotlinx.android.synthetic.main.activity_filtered_leads.*
 
+/**
+ *  list of lead details filtered on the basis of status type
+ */
+
 class FilteredLeadsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,8 +35,10 @@ class FilteredLeadsActivity : AppCompatActivity() {
 
         if (filteredList != null && filteredList.isNotEmpty()) {
             val filteredDatedList =
+                //Not admin
                 if (GlobalLocalCache.getAccountInfo().userid != "1")
                     convertToDatedList(filteredList)
+                // admin
                 else
                     convertToDatedAssignedList(filteredList)
             rvFilteredLeads.adapter = leadsAdapter
